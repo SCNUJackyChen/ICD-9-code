@@ -6,7 +6,7 @@ a = ICD_9_Ontology()
 # for concept in c:
 #     print(concept.get())
 
-b = a.get_concept_by_cid('E848')
+b = a.get_concept_by_cid('990')
 print(b.get())
 print(b.Is_fine_grained())
 

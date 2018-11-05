@@ -111,6 +111,10 @@ class ICD_9_Ontology:
             elif (len(cid) == 3 and len(next_cid) == 4 and cid > next_cid[0:3]): # previous concepts
                 self.token += 1
             elif len(next_cid) == 3:  # fine-grained concept but has no parents except for root
+                a = Concept(next[0], next[1])
+                self.concepts.append(a)
+                self.__record.append(next)
+                self.__link(self.Root, a)
                 self.token += 1
             elif next_cid[0] == 'E' and len(next_cid) == 4: # fine-grained concept begun with E but has no parents
                 self.token += 1
