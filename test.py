@@ -2,7 +2,7 @@ from ICD_9_Ontology import ICD_9_Ontology
 a = ICD_9_Ontology()
 
 
-b = a.get_concept_by_cid('042')
+b = a.get_concept_by_cid('E030')
 print(b.get())
 print(b.Is_fine_grained())
 

@@ -117,6 +117,10 @@ class ICD_9_Ontology:
                 self.__link(self.Root, a)
                 self.token += 1
             elif next_cid[0] == 'E' and len(next_cid) == 4: # fine-grained concept begun with E but has no parents
+                a = Concept(next[0], next[1])
+                self.concepts.append(a)
+                self.__record.append(next)
+                self.__link(self.Root, a)
                 self.token += 1
             else:
                 break
